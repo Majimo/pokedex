@@ -8,6 +8,7 @@ import { ShadowCardDirective } from './directive/shadow-card.directive';
 import { EditPokemonComponent } from './components/forms/edit-pokemon.component';
 import { PokemonFormComponent } from './components/forms/pokemon-form.component';
 import { PokemonSearchComponent } from './components/pokemon-search.component';
+import { LoaderComponent } from './components/loader.component';
 
 import { pokemonTypeColorPipe } from './pipe/pokemon-type-color.pipe';
 
@@ -29,6 +30,7 @@ import { PokemonService } from './services/pokemon.service';
         ShadowCardDirective,
         pokemonTypeColorPipe,
         PokemonSearchComponent,
+        LoaderComponent,
     ],
     providers: [PokemonService]
 })
