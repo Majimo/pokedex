@@ -19,7 +19,7 @@ export class DetailPokemonComponent implements OnInit {
     ngOnInit(): void {
         this.route.params.forEach((params: Params) => {
             let id = +params['id'];
-            this.pokemon = this.pokemonService.getPokemon(id); // Récupérer un pokémon en fonction d'ID
+            this.pokemonService.getPokemon(id).then(pokemon => this.pokemon = pokemon);
         });
     }
 

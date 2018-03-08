@@ -24,11 +24,11 @@ export class ListPokemonComponent {
     }
 
     getPokemons(): void {
-        this.pokemons = this.pokemonService.getPokemons();
+        this.pokemonService.getPokemons().then(pokemons => this.pokemons = pokemons);
     }
 
     selectPokemon(pokemon: Pokemon) {
-        console.log('Vous avez s�lectionn� : ' + pokemon.name);
+        console.log('Vous avez sélectionné : ' + pokemon.name);
         let link = ['/pokemon', pokemon.id];
         this.router.navigate(link);
     }

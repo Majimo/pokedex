@@ -12,7 +12,7 @@ export const POKEMONS: Pokemon[] = [
   },
   {
     id: 2,
-    name: 'Salam�che',
+    name: 'Salamèche',
     hp: 28,
     cp: 6,
     picture: 'http://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png',
@@ -93,11 +93,11 @@ export const POKEMONS: Pokemon[] = [
   },
   {
     id: 11,
-    name: 'M�lof�e',
+    name: 'Mélofée',
     hp: 25,
     cp: 5,
     picture: 'http://assets.pokemon.com/assets/cms2/img/pokedex/detail/035.png',
-    types: ['F�e'],
+    types: ['Fée'],
     created: new Date()
   },
   {
