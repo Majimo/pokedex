@@ -1,4 +1,4 @@
-import { PokemonService } from '../pokemon.service';
+import { PokemonService } from '../services/pokemon.service';
 
 import { POKEMONS } from '../model/mock-pokemons';
 import { Pokemon } from '../model/pokemon';

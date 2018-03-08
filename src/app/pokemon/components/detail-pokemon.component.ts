@@ -4,7 +4,7 @@ import { ActivatedRoute, Router, Params } from '@angular/router';
 import { Pokemon } from '../model/pokemon';
 import { POKEMONS } from '../model/mock-pokemons';
 
-import { PokemonService } from '../pokemon.service';
+import { PokemonService } from '../services/pokemon.service';
 
 @Component({
     selector: 'detail-pokemon',
