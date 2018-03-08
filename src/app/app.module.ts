@@ -5,12 +5,13 @@ import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
+import { AppComponent } from './app.component';
+import { PageNotFoundComponent } from './components/page-not-found.component';
+
+import { PokemonsModule } from './pokemon/pokemon.module';
 import { AppRoutingModule } from './app-routing.module';
 
-import { AppComponent } from './app.component';
-import { PokemonsModule } from './pokemon/pokemon.module';
-
-import { PageNotFoundComponent } from './components/page-not-found.component';
+import { AuthGuard } from './services/auth-guard.service';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { PageNotFoundComponent } from './components/page-not-found.component';
     BrowserModule, PokemonsModule, AppRoutingModule, HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

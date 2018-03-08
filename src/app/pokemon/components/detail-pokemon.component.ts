@@ -25,7 +25,7 @@ export class DetailPokemonComponent implements OnInit {
 
     // Méthode permettant de rediriger l'utilisateur vers la page principale de l'application.
     goBack(): void {
-        window.history.back();
+        this.router.navigate(['/pokemon/all']);
     }
 
     editPokemon(pokemon: Pokemon): void {
