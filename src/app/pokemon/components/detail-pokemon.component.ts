@@ -14,7 +14,7 @@ export class DetailPokemonComponent implements OnInit {
 
     pokemon: Pokemon = null;
 
-    constructor(private route: ActivatedRoute, private pokemonService: PokemonService) { }
+    constructor(private route: ActivatedRoute, private pokemonService: PokemonService, private router: Router) { }
 
     ngOnInit(): void {
         this.route.params.forEach((params: Params) => {
@@ -26,6 +26,11 @@ export class DetailPokemonComponent implements OnInit {
     // Méthode permettant de rediriger l'utilisateur vers la page principale de l'application.
     goBack(): void {
         window.history.back();
+    }
+
+    editPokemon(pokemon: Pokemon): void {
+        let link = ['/pokemon/edit', pokemon.id];
+        this.router.navigate(link);
     }
 
 }
