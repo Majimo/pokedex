@@ -7,20 +7,23 @@ import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './components/page-not-found.component';
+import { LoginComponent } from './login/login.component';
 
 import { PokemonsModule } from './pokemon/pokemon.module';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginRoutingModule } from './login-routing.module';
 
-import { AuthGuard } from './services/auth-guard.service';
+import { AuthGuard } from './login/auth-guard.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
     PageNotFoundComponent,
   ],
   imports: [
-    BrowserModule, PokemonsModule, AppRoutingModule, HttpModule,
+    BrowserModule, PokemonsModule, AppRoutingModule, LoginRoutingModule, HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
   ],
   providers: [AuthGuard],

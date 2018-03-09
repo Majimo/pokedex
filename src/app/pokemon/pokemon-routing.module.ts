@@ -5,7 +5,7 @@ import { ListPokemonComponent } from './components/list-pokemon.component';
 import { DetailPokemonComponent } from './components/detail-pokemon.component';
 import { EditPokemonComponent } from './components/forms/edit-pokemon.component';
 
-import { AuthGuard } from '../services/auth-guard.service';
+import { AuthGuard } from '../login/auth-guard.service';
 
 const pokemonsRoutes: Routes = [
     { path: 'pokemon/all', component: ListPokemonComponent },
